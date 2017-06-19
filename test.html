@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Stydent Work</title>
+
+   
+    
+    
+    <link href="test.css"  rel="stylesheet">
+    <link href="bootstrap.css"  rel="stylesheet">
+    <link rel="stylesheet" href="jquery.js">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" >
+    	
+    	$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
+	$('a#go').click( function(event){ // лoвим клик пo ссылки с id="go"
+		event.preventDefault(); // выключaем стaндaртную рoль элементa
+		$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+		 	function(){ // пoсле выпoлнения предъидущей aнимaции
+				$('#modal_form') 
+					.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+					.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+		});
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+		$('#modal_form')
+			.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+				function(){ // пoсле aнимaции
+					$(this).css('display', 'none'); // делaем ему display: none;
+					$('#overlay').fadeOut(400); // скрывaем пoдлoжку
+				}
+			);
+	});
+});
+    </script>
+
+
+    
+
+   
+ </head>
+<body>
+    <!-- Begin header -->
+    
+    	<div class="container" id="container">
+    	<header>
+	    	<div class="col-xs-12 logo col-md-3">
+	    		  <div class="row">
+	    		  	<a href=""><img src="logo.png" alt=""></a>
+	    		  </div>
+	    	</div>
+			
+				<nav>
+					<div class="col-xs-12 logo col-md-7">
+						<div class="top-header">
+							<ul id="sub-menu">
+								<li><a href="#">Компания</a>
+										<ul class="sub-menu" >
+											<li><a href="#">Наши преприятия</a></li>
+											<hr>
+											<li><a href="#">наши партнеры</a></li><hr>
+											<li><a href="#">наши технологии</a></li><hr>
+											<li><a href="#">медиа</a></li><hr>
+											<li><a href="#">наши проекты</a></li><hr>
+											<li><a href="#">нашим инвесторам</a></li><hr>
+											<li><a href="#">карьера</a></li><hr>
+											<li><a href="#">контакты</a></li>
+										</ul>			
+								</li>
+								<li><a href="#">решения</a></li>
+								<li><a href="#">купить</a></li>
+								<li><img src="logo1.png" alt=""><a href="#">войти</a></li>
+								<li><img src="search-img.png" alt=""><a href="#"><input type="search" placeholder="ПОИСК"></a><hr></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="col-xs-12 col-md-2 number">
+				<p>+7 (499) 941-08-55</p>
+				<p>+7 (499) 545-45-11</p>
+			</div>
+			<div class="container">
+				</div><hr class="hr1">
+			</div>
+			
+			
+			
+
+    	</header>
+
+    	</div>
+
+
+    	<!-- The end of header -->
+
+		<!-- Begin top-block -->
+		<div class="container">
+		<div id="top-block">
+			
+		</div>
+   </div>
+
+
+   <!-- The end top-block -->
+   <!-- Begin Content-menu -->
+	<div class="container">
+     		<div id="Content-menu">
+	          <div class="row">
+	              <div class="col-xs-12 col-md-5">
+	              	<h1>Пусконаладочные работы</h1>
+	              </div>
+
+
+	              <div class="col-xs-12 col-md-3 col-md-offset-2">
+	              <div id="go"><a href="#" >Заказать обратный звонок</a></div>
+	              	<div id="modal_form"><!-- Сaмo oкнo --> 
+						<span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+						<form action="#">
+							<input type="text" placeholder="Введите ваше имя*">
+							<input type="text" placeholder="Введите ваш номер*">
+							<button type="submit">Отправить</button>
+						</form>
+					</div>
+						<div id="overlay"></div><!-- Пoдлoжкa -->
+	              </div>
+	          </div>
+
+
+		<div class="row">
+		           <div class="col-md-3 sidebar" >
+		           <ul><hr>
+		           		<li>Проектирование<br>Электромонтажные работы <a href="#"></a>
+			           	</li>
+			           	<hr>
+			           	<li>Строительно-
+						монтажные работы<a href="#">
+						</a></li>
+						<hr>
+			           
+			           	
+			           	<li>Транспортные
+						услуги<a href="#"></a>
+						</li>	
+						<hr>
+						<li>Пусконаладочные работы<a href="#"></a></li>
+				    </ul>
+	     		</div>
+	     		
+		     	<div class="col-md-9 right-sitebar">
+
+					     		<div class="col-md-12 col-xs-12">
+					     			<h3>Пусконаладочные работы для трансформаторных и
+											распределительных подстанций
+									</h3>
+					     			<p>При поставке трансформаторных и распределительных подстанций «Трансформер» специалисты 		компании осуществляют комплекс пусконаладочных работ. В стоимость проекта данные работы 	не входят и согласовываются с заказчиком отдельно.
+					     			</p>
+					     			
+					     		</div>
+					     			
+					     				<div class="row">
+						     				<div class="col-md-12 content-text">
+						     					<div class="content-text">
+						     						<h4>Этапы работ по вводу подстанций в эксплуатацию:</h4>
+						     					</div>											
+						     				</div>
+						     			</div>
+						     		<div class="row content-row">
+						     				<div id="square">				     				
+						     						<div class="col-md-4 first">
+														<div class="square-1">					
+														</div>
+																												
+														<p class="square-text1">Монтаж строительной части<br> и монтаж<br> электрооборудования, не <br>установленного* в <br>подстанцию в заводских <br>условиях.
+														</p>
+														<div class="square-number1">
+															1
+														</div>
+																	
+									     			</div>
+									     			
+									     			<div class="col-md-4 first">
+									     				<div class="square-2">
+															
+															</div>
+																													
+															<p class="square-text2">Монтаж строительной части<br> и монтаж<br> электрооборудования, не <br>установленного* в <br>подстанцию в заводских <br>условиях.
+															</p>
+															<div class="square-number2">
+																2
+															</div>
+														</div>
+									     			<div class="col-md-4 first"><div class="square-3">
+															
+														</div>
+																												
+														<p class="square-text3">Монтаж строительной части<br> и монтаж<br> электрооборудования, не <br>установленного* в <br>подстанцию в заводских <br>условиях.
+														</p>
+														<div class="square-number3">
+															3
+														</div>
+													</div>
+
+													<div class="col-md-4 first">
+														<div class="square-1">
+															
+														</div>
+																												
+														<p class="square-text1">Монтаж строительной части<br> и монтаж<br> электрооборудования, не <br>установленного* в <br>подстанцию в заводских <br>условиях.
+														</p>
+														<div class="square-number1">
+															4
+														</div>
+																	
+									     			</div>
+									     			<div class="col-md-4 first">
+														<div class="square-1">
+															
+														</div>
+																												
+														<p class="square-text1">Монтаж строительной части<br> и монтаж<br> электрооборудования, не <br>установленного* в <br>подстанцию в заводских <br>условиях.
+														</p>
+														<div class="square-number1">
+															5
+														</div>
+																	
+									     			</div>
+									     			
+									     		</div>
+
+
+
+
+												</div>
+												
+
+
+
+
+							     				
+										
+					     			
+		     		</div>
+		     				
+					     	
+					     
+	     		
+     		</div>
+     		
+
+     		</div>
+
+     		
+
+
+
+			<div class="menu-Content">
+								     	<div class="medium">
+								     	<p>
+								     		
+								     		В комплектных трансформаторных и распределительных подстанциях «Трансформер» электрооборудование устанавливается в заводских условиях. По заявке клиента возможно проведение электромонтажных работ не на заводе-изготовителе, а непосредственно на объекте.
+								     		</p>
+								     	</div>
+								     	</div>
+
+
+			    </div>
+
+			
+		<div class="container">
+     		<div id="Content-menu">
+     		
+	          <div class="row">
+	          	<div class="col-md-10 col-md-offset-2 last-menu">
+	          		<p>В ходе пусконаладочных работ осуществляется наладка оборудования, выполняется проверка кабельных переключений, шинных мостов, разъемов и др., проводится ряд измерений и испытаний. По итогам специалисты компании совместно с представителями заказчика оформляют техническую документацию для предоставления в органы Энергонадзора.  </p>
+	          		<h3>Пусконаладочные работы для силовых трансформаторов
+							и электрооборудования «Трансформер»
+					</h3>
+					<p>В случае приобретения или замены силовых трансформаторов и другого электрооборудования для подстанций сторонних производителей, пусконаладочные работы осуществляет предприятие–изготовитель подстанции или организация, осуществляющая ее сборку. <br>
+​​​​​​​					<br>
+					Группа «Трансформер» предоставляет гарантию на свою продукцию и обеспечивает надлежащее ее качество. При возникновении претензий на место выезжает инженер-испытатель в составе передвижной электролаборатории, с целью проверки, проведения необходимых измерений и испытаний. По итогам оформляется заключение об исправности оборудования или необходимости его замены.</p>
+					<div class="row">
+					<div class="col-md-5">
+						<h3>По всем вопросам обращаться:</h3>
+
+						<p class="contacts">Компания «ЭнергоПромАльянс», ООО «ЭПА»
+							Тел. <span class="telefon">+7 (495) 545-45-11</span>, доб. 1514, 1505, 1502​​​​​​​
+								e-mail: <span class="email">trade@epatrade.ru</span>
+						</p>
+
+						
+					</div>
+					<div class="col-md-4 col-md-offset-1">
+						
+						<h4>Или отправьте заявку и мы
+								свяжемся с вами
+						</h4>
+
+						<form >
+							<input type="text"  required placeholder="Ваше имя">
+							<input type="text" 	required placeholder="телефон">
+							<input type="text"  required placeholder="email">
+							<button >отправить</button>
+						</form>
+					</div>
+					</div>
+	          	</div>
+    		
+			
+
+
+	          </div>
+	          
+	         </div>
+	    </div>
+
+<!-- the end Content-menu -->
+<!-- Begin Footer -->
+<footer>
+	<div class="container">
+     		<div id="footer">
+     		
+	          <div class="row">
+
+	          <div class="col-md-3">
+	          	<div class='rotatable'>
+						О нас
+				</div>
+	          	<nav>
+
+	          		<ul>
+	          		
+	          			<a href="#"><li>О компании</li></a>
+	          			<a href="#"><li>Реализованные проекты</li></a>
+	          			<a href="#"><li>Стань дилером</li></a>
+	          			<a href="#"><li>Контакты</li></a>
+	          			<a href="#"><li>Новости и Публикации</li></a>
+	          		</ul>
+	          	</nav>
+
+	          </div>
+	          <div class="col-md-3">	
+	          <div class='rotatable1'>
+						Продукция
+				</div>
+		          	<nav>
+		          		<ul>
+		          			<a href="#"><li>Трансформаторы</li></a>
+		          			<a href="#"><li>Подстанции</li></a>
+		          			<a href="#"><li>Электрооборудорвание</li></a>
+		          			<a href="#"><li>Меьаллоизделия</li></a>
+		          			<a href="#"><li>Бетонные модули</li></a>
+		          			<a href="#"><li>Прочее</li></a>
+		          		</ul>
+		          	</nav>
+	          	</div>
+	          <div class="col-md-3">
+	          <div class='rotatable2'>
+						Услуги
+				</div>	
+		          	<nav>
+		          		<ul>
+		          			<a href="#"><li>Трансформаторы</li></a>
+		          			<a href="#"><li>Подстанции</li></a>
+		          			<a href="#"><li>Электрооборудорвание</li></a>
+		          			<a href="#"><li>Меьаллоизделия</li></a>
+		          			<a href="#"><li>Бетонные модули</li></a>
+		          			<a href="#"><li>Прочее</li></a>
+		          		</ul>
+		          	</nav>
+	          	</div>
+
+	          	<div class="col-md-3">
+	          	<div class='rotatable3'>
+						Контакты
+				</div>	
+		          	<nav>
+
+		          		<ul>
+
+		          			<li>+7(499) 941-08-55</li>
+		          			<li>+7(499) 545-45-11</li>
+		          			<a href="http://www.hitechgp.ru/"><li><img src="sms.png" alt="">trade@hitechgp.ru</li></a>
+		          			<a href="#"><li><img src="phone.png" alt="">Заказать звонок</li></a>
+		          			<a href="https://www.instagram.com/"><li><img src="insta.png" alt="">Instagram</li></a>
+		          			<a href="https://www.youtube.com/?gl=RU&hl=ru"><li><img src="youtube.png" alt="">Youtube</li></a>
+		          			<a href="#"><li><img src="search.png" alt="">Поиск</li></a>
+		          		</ul>
+		          	</nav>
+	          	</div>
+	          </div>
+	          <hr>
+	          <div class="col-md-6">
+	          <p>© 2017. ООО «ХАЙТЕК». строительство сетей энергоснабжения.</p>
+	          </div>
+	          <div class="col-md-6 basement">
+	          <img src="geo.png" alt="">
+	          разработка и поддержка — «эврика»
+	          </div>
+	        </div>
+	</div>
+</footer>
+       	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+       	
+</body>
+</html>
